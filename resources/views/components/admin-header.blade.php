@@ -10,6 +10,8 @@
     <title>Otika - Admin Dashboard Template</title>
     <!-- General CSS Files -->
     <link rel="stylesheet" href="/assets/css/app.min.css">
+    <link rel="stylesheet" href="/assets/bundles/datatables/datatables.min.css">
+    <link rel="stylesheet" href="/assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
     <!-- Template CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/components.css">
@@ -19,4 +21,6 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
+
     <div class="loader"></div>
