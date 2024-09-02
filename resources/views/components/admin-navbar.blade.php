@@ -54,15 +54,15 @@
             <li class="dropdown {{ Request::routeIs('dashboard') ? 'active' : '' }}">
                 <a href="{{ route('dashboard') }}" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
             </li>
-            <li class="dropdown">
-                <a href="" class="nav-link"><i data-feather="tag"></i><span>Category</span></a>
+            <li class="dropdown {{ Request::routeIs('category.index') ? 'active' : '' }}">
+                <a href="{{ route('category.index') }}" class="nav-link"><i data-feather="tag"></i><span>Category</span></a>
             </li>
-            <li class="dropdown">
-                <a href="index.html" class="nav-link"><i data-feather="book-open"></i><span>Post</span></a>
+            {{-- <li class="dropdown {{ Request::routeIs('post.index') ? 'active' : '' }}">
+                <a href="{{ route('post.index') }}" class="nav-link"><i data-feather="book-open"></i><span>Post</span></a>
             </li>
-            <li class="dropdown">
-                <a href="index.html" class="nav-link"><i data-feather="image"></i><span>Advertise</span></a>
-            </li>
+            <li class="dropdown {{ Request::routeIs('advertise.index') ? 'active' : '' }}">
+                <a href="{{ route('advertise.index') }}" class="nav-link"><i data-feather="image"></i><span>Advertise</span></a>
+            </li> --}}
             <li class="dropdown">
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i
                         data-feather="settings"></i><span>Setting</span></a>

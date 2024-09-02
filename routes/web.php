@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\Admin\CompanyController;
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\CompanyController;
+use App\Http\Controllers\Admin\CategoryController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,9 +18,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-
-
     Route::resource('admin/company', CompanyController::class)->names('company');
+    Route::resource('admin/category', CategoryController::class)->names('category');
+
 
 
 });

@@ -36,7 +36,7 @@
                                                     1
                                                 </td>
                                                 <td>
-                                                    <img alt="image" src="/{{ $company->logo }}" width="100">
+                                                    <img alt="Logo" src="/{{ $company->logo }}" width="100">
                                                 </td>
                                                 <td class="align-middle">
                                                     {{ $company->name }}
@@ -60,13 +60,9 @@
                                                             class="mr-3 btn btn-primary">
                                                             <i class="fas fa-edit"></i>
                                                         </a>
-                                                        <form action="{{ route('company.destroy', $company->id) }}"
-                                                            method="post">
-                                                            @csrf
-                                                            @method('delete')
-                                                            <button class="btn btn-danger"><i
-                                                                    class="fas fa-trash"></i></button>
-                                                        </form>
+                                                        <a href="{{ route('company.destroy', $company->id) }}"
+                                                            class="btn btn-danger" data-confirm-delete="true"><i
+                                                                class="fas fa-trash"></i></a>
                                                     </div>
                                                 </td>
                                             </tr>

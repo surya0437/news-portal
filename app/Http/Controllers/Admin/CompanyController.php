@@ -149,10 +149,18 @@ class CompanyController extends Controller
     /**
      * Remove the specified resource from storage.
      */
+
     public function destroy(string $id)
     {
-        $company = Company::find($id);
+        $company = Company::findOrFail($id);
+
+        // Check if logo exists before attempting to delete it
+        if (file_exists(public_path($company->logo))) {
+            unlink(public_path($company->logo));
+        }
+
         $company->delete();
+
         toast('Record deleted successfully', 'success');
         return redirect()->route('company.index');
     }
