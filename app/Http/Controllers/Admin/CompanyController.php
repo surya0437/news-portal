@@ -154,7 +154,6 @@ class CompanyController extends Controller
     {
         $company = Company::findOrFail($id);
 
-        // Check if logo exists before attempting to delete it
         if (file_exists(public_path($company->logo))) {
             unlink(public_path($company->logo));
         }

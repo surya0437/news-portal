@@ -5,7 +5,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="mt-3 card-header d-flex justify-content-between">
-                            <h5>Create Company</h5>
+                            <h5>Company</h5>
                             @if (!$company)
                                 <a href="{{ route('company.create') }}"
                                     class="btn btn-primary d-flex justify-content-between align-items-center">
@@ -45,7 +45,7 @@
                                                     {{ $company->email }}
                                                 </td>
                                                 <td>
-                                                    {{ $company->phone }}
+                                                    {{ $company->phone }} 
                                                 </td>
                                                 <td>
                                                     @if ($company->status == 1)

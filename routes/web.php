@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\AdvertisementController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,9 +21,7 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('admin/company', CompanyController::class)->names('company');
     Route::resource('admin/category', CategoryController::class)->names('category');
-
-
-
+    Route::resource('admin/advertisement', AdvertisementController::class)->names('advertisement');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
