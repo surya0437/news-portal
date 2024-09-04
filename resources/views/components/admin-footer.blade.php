@@ -4,6 +4,8 @@
 <script src="/assets/bundles/apexcharts/apexcharts.min.js"></script>
 <script src="/assets/bundles/datatables/datatables.min.js"></script>
 <script src="/assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script src="/assets/bundles/select2/dist/js/select2.full.min.js"></script>
+<script src="/assets/bundles/summernote/summernote-bs4.js"></script>
 <script src="/assets/bundles/jquery-ui/jquery-ui.min.js"></script>
 <!-- Page Specific JS File -->
 <script src="/assets/js/page/datatables.js"></script>

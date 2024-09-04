@@ -114,7 +114,6 @@
                                     @error('status')
                                         <p class="mt-1 text-danger">{{ $message }}</p>
                                     @enderror
-
                                 </div>
                             </div>
                             <div class="text-right card-footer">

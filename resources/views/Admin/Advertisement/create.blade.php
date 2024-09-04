@@ -96,19 +96,6 @@
                                         <p class="mt-1 text-danger">{{ $message }}</p>
                                     @enderror
                                 </div>
-
-                                <div class="form-group col-md-12">
-                                    <label for="status">Status</label>
-                                    <select name="status" class="form-control">
-                                        <option value="Active">Active</option>
-                                        <option value="Inactive">Inactive</option>
-                                        <option value="Expired">Expired</option>
-                                    </select>
-                                    @error('status')
-                                        <p class="mt-1 text-danger">{{ $message }}</p>
-                                    @enderror
-
-                                </div>
                             </div>
                             <div class="text-right card-footer">
                                 <button class="btn btn-primary">Submit</button>
