@@ -6,10 +6,14 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\AdvertisementController;
+use App\Http\Controllers\Frontend\HomeController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

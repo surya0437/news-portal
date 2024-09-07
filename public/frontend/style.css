@@ -1,0 +1,49 @@
+:root {
+    --primary: #d50707;
+    --darkprimary: #fe3232;
+    --lightprimary: #fe32321a;
+    --gray: #727885;
+}
+
+.primary {
+    color: var(--primary);
+}
+
+.primarybg {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.container{
+    width: 90vw;
+    margin: auto;
+}
+
+section nav ul li {
+    font-size: 18px;
+    color: #fff;
+}
+
+section nav ul li:hover {
+    color: yellow;
+}
+
+.active {
+    color: yellow;
+    font-weight: bold;
+}
+
+.smallimg {
+    height: 86px;
+    width: 149px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.trendingbg {
+    border-left: 5px solid var(--primary);
+    background-color: var(--lightprimary);
+    color: var(--primary);
+    height: 52px;
+}
+

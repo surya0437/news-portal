@@ -6,10 +6,10 @@
                     <div class="card">
                         <div class="mt-3 card-header d-flex justify-content-between">
                             <h5>Advertisements</h5>
-                                <a href="{{ route('advertisement.create') }}"
-                                    class="btn btn-primary d-flex justify-content-between align-items-center">
-                                    <i class="fas fa-plus"></i><span class="ml-2">Add</span>
-                                </a>
+                            <a href="{{ route('advertisement.create') }}"
+                                class="btn btn-primary d-flex justify-content-between align-items-center">
+                                <i class="fas fa-plus"></i><span class="ml-2">Add</span>
+                            </a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -31,10 +31,10 @@
                                     </thead>
                                     <tbody>
                                         @if ($advertisements)
-                                            @foreach ($advertisements as $advertisement)
+                                            @foreach ($advertisements as $index => $advertisement)
                                                 <tr>
                                                     <td>
-                                                        1
+                                                        {{ ++$index }}
                                                     </td>
                                                     <td>
                                                         <img alt="Logo" src="/{{ $advertisement->image }}"
@@ -53,8 +53,8 @@
                                                         {{ $advertisement->budget }}
                                                     </td>
                                                     <td>
-                                                        <a
-                                                            href="{{ $advertisement->link }}" target="_blank"><u>{{ $advertisement->title }}</u></a>
+                                                        <a href="{{ $advertisement->link }}"
+                                                            target="_blank"><u>{{ $advertisement->title }}</u></a>
 
                                                     </td>
                                                     <td>
